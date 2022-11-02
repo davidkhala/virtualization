@@ -1,15 +1,9 @@
 set -e
 
-export CloudProfilePath=~/.config/VirtualBox/oci_config
-create-oci-key() {
 
-    local privateKey=${1:-~/.oci/oci_api_key_vbox.pem}
-    local publicKey=${2:-~/.oci/oci_api_key_public_vbox.pem}
-    openssl genrsa -out $privateKey 2048
-    chmod go-rwx $privateKey
-    openssl rsa -pubout -in $privateKey -out $publicKey
+linux() {
     
-    xclip -sel clip $publicKey
+    curl https://raw.githubusercontent.com/davidkhala/linux-utils/main/vbox.sh | bash -s create-oci-key $@
 
 }
 
