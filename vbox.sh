@@ -1,4 +1,6 @@
 set -e
+
+export CloudProfilePath=~/.config/VirtualBox/oci_config
 create-oci-key() {
 
     local privateKey=${1:-~/.oci/oci_api_key_vbox.pem}
