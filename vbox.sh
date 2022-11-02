@@ -7,7 +7,7 @@ create-oci-key() {
     chmod go-rwx $privateKey
     openssl rsa -pubout -in $privateKey -out $publicKey
     
-    cat $publicKey | xclip
+    xclip -sel clip $publicKey
 
 }
 
