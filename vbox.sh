@@ -10,7 +10,7 @@ list-vm-all(){
     vboxmanage list vms
 }
 list-vm(){
-    VBoxManage list runningvms
+    vboxmanage list runningvms
 }
 
 $@
