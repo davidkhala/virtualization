@@ -18,4 +18,7 @@ start-vm(){
 delete-vm(){
     VBoxManage unregistervm --delete $1
 }
+stop-vm(){
+    VBoxManage controlvm $1 acpipowerbutton
+}
 $@
