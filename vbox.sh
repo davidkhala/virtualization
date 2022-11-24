@@ -16,6 +16,6 @@ start-vm(){
     VBoxManage startvm $1
 }
 delete-vm(){
-    VBoxManage unregistervm --delete "Name of Virtual Machine"
+    VBoxManage unregistervm --delete $1
 }
 $@
