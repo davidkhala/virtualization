@@ -12,5 +12,7 @@ list-vm-all(){
 list-vm(){
     vboxmanage list runningvms
 }
-
+start-vm(){
+    VBoxManage startvm $1
+}
 $@
