@@ -1,13 +1,3 @@
-set -e
-
-linux() {
-
-    curl https://raw.githubusercontent.com/davidkhala/linux-utils/main/vbox.sh | bash -s create-oci-key $@
-
-}
-build-kernal() {
-    sudo /sbin/vboxconfig
-}
 list-vm-all() {
     vboxmanage list vms
 }
